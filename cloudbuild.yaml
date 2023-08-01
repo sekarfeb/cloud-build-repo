@@ -36,7 +36,7 @@ steps:
     args: ['auth', 'configure-docker']
 
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['container', 'clusters', 'get-credentials', 'cluster-1', '--zone=us-central1-c','--project amazing-thought-387010']
+    args: ['container', 'clusters', 'get-credentials', 'cluster-1', '--zone=us-central1-c']
 
   - name: 'gcr.io/cloud-builders/kubectl'
     args: ['version']
