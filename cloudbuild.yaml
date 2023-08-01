@@ -40,6 +40,10 @@ steps:
 
   - name: 'gcr.io/cloud-builders/kubectl'
     args: ['create', 'deployment', 'nginx', '--image=nginx']
+    env:
+    - CLOUDSDK_COMPUTE_ZONE=us-central1-a
+    - CLOUDSDK_COMPUTE_REGION=us-central1-a
+    - CLOUDSDK_CONTAINER_CLUSTER=cluster-1
 
   - name: 'gcr.io/cloud-builders/kubectl'
     args: ['apply', '-f', 'backend/deployment.yaml']
