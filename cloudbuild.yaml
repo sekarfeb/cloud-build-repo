@@ -4,10 +4,6 @@ steps:
     args: ['install']
     dir: 'backend'  # Path to the backend directory containing package.json
 
-  # Step 2: Build the backend
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['build']
-    dir: 'backend'  # Path to the backend directory containing package.json
 
   # Step 3: Build the frontend (React.js)
   - name: 'gcr.io/cloud-builders/npm'
